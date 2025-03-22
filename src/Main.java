@@ -37,25 +37,45 @@ public class Main {
         double third = new Scanner(System.in).nextDouble();
 
         double greatest = 0;
-        if (first > second && first > third) {
-            System.out.println(greatest = first);
-        } else if (second > first && second > third) {
-            System.out.println(greatest = second);
-        } else {
-            System.out.println(greatest = third);
-        }
-
-
-            double average = ((first + second + third) / 3);
-
         double smallest = 0;
-        if (first < second && first < third) {
-            System.out.println(smallest = first);
-        } else if (second < first && second < third) {
-            System.out.println(smallest = second);
+        double average = 0;
+        if (first > second && first > third) {
+            greatest = first;
+        } else if (first < second && first < third) {
+            smallest = first;
         } else {
-            System.out.println(smallest = third);
+            average = first;
         }
+        if (second > first && second > third) {
+            greatest = second;
+        } else if (second < first && second < third) {
+            smallest = second;
+        } else {
+            average = second;
+        }
+        if (third > first && third > second) {
+            greatest = third;
+        } else if (third < first && third < second) {
+            smallest = third;
+        } else {
+            average = third;
+        }
+        System.out.println("Наибольший вес: " + greatest);
+        System.out.println("Средний вес: " + average);
+        System.out.println("Наименьший вес: " + smallest);
+    }
+}
+
+        //} else if (second > first && second > third) {
+        //    greatest = second;
+        //} else {
+        //    greatest = third;
+
+
+
+
+
+
             //todo дописать логику программы ниже.
 
         /* Если первое число больше второго числа, мы первое число сравниваем с третьим,
@@ -70,8 +90,7 @@ public class Main {
             //todo
 
 
-            System.out.println("Наибольший вес: " + greatest);
-            System.out.println("Средний вес: " + average);
-            System.out.println("Наименьший вес: " + smallest);
-        }
-    }
+            //System.out.println("Наибольший вес: " + greatest);
+           // System.out.println("Средний вес: " + average);
+          // System.out.println("Наименьший вес: " + smallest);
+
